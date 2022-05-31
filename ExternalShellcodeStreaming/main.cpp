@@ -1,7 +1,7 @@
 #include "windowhelper.h"
 
 const wchar_t*      wnd_name        = L"ShellCode Target";
-constexpr long long p_write_address = 0x840C35F798;
+constexpr long long p_write_address = <CHECK FOR TARGET OUTPUT>;
 
 static void __stdcall write(int* address)
 {
@@ -67,7 +67,7 @@ int main()
 	                             shellcodeSize,
 	                             &bytesWritten);
 	if (!success || bytesWritten < shellcodeSize) {
-		wait_and_exit_with_error("Could not write write to remote process.");
+		wait_and_exit_with_error("Could not write to remote process.");
 	}
 	printf("[+] Wrote write into remote process.\n");
 
